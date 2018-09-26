@@ -16,8 +16,21 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success (res) {
+              wx.switchTab({
+                url: '../root/root',
+                success: function(res){
+                  // success
+                },
+                fail: function() {
+                  // fail
+                },
+                complete: function() {
+                  // complete
+                }
+              })
               console.log(res.data)
             }
         })     
-    }
+    },
+
 })

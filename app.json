@@ -1,12 +1,34 @@
 {
   "pages":[
+    "pages/mine/mine",
     "pages/login/login",
+    "pages/root/root",
     "pages/index/index"
   ],
   "window":{
     "backgroundTextStyle":"light",
-    "navigationBarBackgroundColor": "#fff",
-    "navigationBarTitleText": "WeChat",
-    "navigationBarTextStyle":"black"
+    "navigationBarBackgroundColor": "#3b9cff",
+    "navigationBarTitleText": "CRM",
+    "navigationBarTextStyle":"white"
+  },
+  "tabBar":{
+    "color":"#000000",
+    "backgroundColor":"#ffffff",
+    "borderStyle":"black",
+    "list":[
+      {
+      "iconPath": "images/Tabbar_Daka_Normal.png",
+      "selectedIconPath": "images/Tabbar_Daka_Selected.png",
+      "pagePath": "pages/root/root",
+      "text": "首页"
+      },
+      {
+      "iconPath": "images/Tabbar_Mine_Normal.png",
+      "selectedIconPath": "images/Tabbar_Mine_Selected.png",
+      "pagePath": "pages/mine/mine",
+      "text": "我的"
+      }
+    ],
+    "borderStyle":"bottom"
   }
 }
