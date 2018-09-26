@@ -1,0 +1,41 @@
+.icon{
+    margin-top: 80rpx;
+    width: 80rpx;
+    height: 80rpx;
+    border-radius: 10rpx; 
+}
+
+.title{
+    margin-top: 10rpx;
+    font-size: 18px;
+    color:#2b2f33;
+}
+.username{
+    margin-top: 70rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.password{
+    margin-top: 15rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+}
+
+.inputTitle{
+    font-size: 16px;
+    color:#2b2f33;
+}
+.loginButton{
+    margin-top: 27rpx;
+    width: 290px;
+    border-radius: 25px;
+    color: white;
+    background-color: #3b9cff;
+}
+.company{
+    margin-bottom:  40rpx;
+    font-size: 13px;
+    color:#939699;
+}

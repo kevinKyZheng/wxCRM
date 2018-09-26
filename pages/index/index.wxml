@@ -1,0 +1,25 @@
+<view class="container wrapper">
+  <view class="content">
+    <text class="header">OA办公</text>
+    <view class="list">
+      <block wx:for="{{topArray}}" wx:key="index">
+        <view class="item" catch:tap="goDetail" data-id = "{{item.title}}">
+          <image class="icon" src="../../images/{{item.icon}}" mode="scaleToFill" />
+          <text class="title">{{item.title}}</text>
+        </view> 
+      </block> 
+    </view>
+  </view>
+
+  <view class="content">
+    <text class="header">CRM营销</text>
+    <view class="list">
+      <block wx:for="{{bottomArray}}" wx:key="index">
+        <view class="item" catch:tap="goDetail">
+          <!-- <image class="icon" src="" mode="scaleToFill" /> -->
+          <text class="title">{{item.title}}</text>
+        </view> 
+      </block>
+    </view>
+  </view>
+</view>
