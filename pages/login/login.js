@@ -4,6 +4,9 @@ Page({
 
     },
     tapLoginBtn:function(){
+        wx.showLoading({
+          title:"加载中"
+        })
         wx.request({
             url: 'http://crmapi.chinawutong.com/api/Login/UserLogin', //仅为示例，并非真实的接口地址
             // "userName": username, "userPass": password, "source": "iOS"
@@ -17,6 +20,7 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success (res) {
+              wx.hideLoading()
               app.globalData.userInfo["userId"] = res.data["data"]["UserID"];
               app.globalData.userInfo["token"] = res.data["data"]["Token"];
               app.globalData.userInfo["power"] = res.data["data"]["UserPower"];

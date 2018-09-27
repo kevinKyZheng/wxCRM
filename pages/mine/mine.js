@@ -65,7 +65,7 @@ Page({
             method: 'POST',
             header: {
                 'content-type': 'application/json', // 默认值
-                'userid':app.globalData.userInfo["userId"],
+                'user`id':app.globalData.userInfo["userId"],
                 'token':token,
                 'nowTime':timeInterval,
                 'source':'iOS'
