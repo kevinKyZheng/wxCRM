@@ -3,6 +3,7 @@
     flex-direction: column;
     align-items: center;
     width: 100%;
+    height: 400rpx;
 }
 .icon{
     width: 75px;
@@ -11,10 +12,14 @@
     /* background-color: aqua; */
 }
 .title{
-   color: white; 
+    margin-top: 20rpx;
+    color: white; 
+    font-size: 48rpx;
 }
 .motto{
+    margin-top: 30rpx;
     color: white;
+    font-size: 30rpx;
 }
 .list{
     background-color: white;
@@ -23,8 +28,9 @@
     /* display: inline; */
 }
 .logout{
-    border-color: blue;
-    border-width: 10rpx;
-    color: blue;
+    color: #3b9cff;
     width: 570rpx;
+}
+.logout::after{
+    /* border: ; */
 }

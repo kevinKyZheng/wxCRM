@@ -1,3 +1,4 @@
+const app = getApp()
 Page({
     data:{
 
@@ -16,6 +17,9 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success (res) {
+              app.globalData.userInfo["userId"] = res.data["data"]["UserID"]
+              app.globalData.userInfo["token"] = res.data["data"]["Token"]
+
               wx.switchTab({
                 url: '../root/root',
                 success: function(res){
@@ -28,7 +32,9 @@ Page({
                   // complete
                 }
               })
-              console.log(res.data)
+              
+              console.log(app.globalData.userInfo["token"])
+              console.log(app.globalData.userInfo["userId"])
             }
         })     
     },

@@ -1,41 +1,68 @@
 .icon{
-    margin-top: 80rpx;
-    width: 80rpx;
-    height: 80rpx;
+    margin-top: 160rpx;
+    width: 120rpx;
+    height: 120rpx;
     border-radius: 10rpx; 
 }
 
 .title{
     margin-top: 10rpx;
-    font-size: 18px;
+    font-size: 36rpx;
     color:#2b2f33;
 }
 .username{
-    margin-top: 70rpx;
+    margin-top: 140rpx;
+    width: 580rpx;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 .password{
-    margin-top: 15rpx;
+    margin-top: 30rpx;
+    width: 580rpx;
+
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
 }
 
 .inputTitle{
-    font-size: 16px;
+    font-size: 32rpx;
     color:#2b2f33;
+    /* 文字不垂直居中 */
+    /* padding-top:6rpx; */
 }
 .loginButton{
-    margin-top: 27rpx;
-    width: 290px;
-    border-radius: 25px;
+    margin-top: 54rpx;
+    width: 580rpx;
+    height: 100rpx;
+    border-radius: 50rpx;
     color: white;
     background-color: #3b9cff;
+        /* 文字不垂直居中 */
+    /* padding-bottom: 100rpx; */
 }
 .company{
-    margin-bottom:  40rpx;
-    font-size: 13px;
+    position: absolute;
+    bottom: 30rpx;
+    font-size: 26rpx;
     color:#939699;
 }
+.line{
+    background: #e0e3e6;
+    height: 1rpx;
+    width: 580rpx;
+    margin-top: 30rpx;
+}
+#usernameInput{
+    margin-left: 24rpx;
+    font-size: 32rpx;
+    color:#2b2f33;
+}
+#passwordInput{
+    margin-left: 24rpx;
+    font-size: 32rpx;
+    color:#2b2f33;
+}
+
