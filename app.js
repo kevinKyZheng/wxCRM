@@ -34,6 +34,6 @@ App({
     })
   },
   globalData: {
-    userInfo: {"userId":"","token":""}
+    userInfo: {"userId":"","token":"","power":[]}
   }
 })

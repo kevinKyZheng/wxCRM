@@ -1,5 +1,16 @@
 <view class="container wrapper">
-    <view class="content">
+    <view class="list">
+        <block wx:for="{{sectionTitleArray}}" wx:key="index">
+            <text class="header">{{item.title}}</text>
+            <view class="list">
+              <block wx:for="{{item.elements}}" wx:key="index"  wx:for-item="element" >
+                <text class="header">{{element}}</text>
+              </block>  
+            </view>
+        </block>
+    </view>
+
+    <!-- <view class="content">
       <text class="header">OA办公</text>
       <view class="list">
         <block wx:for="{{topArray}}" wx:key="index">
@@ -16,11 +27,10 @@
       <view class="list">
         <block wx:for="{{bottomArray}}" wx:key="index">
           <view class="item" catch:tap="goDetail">
-            <!-- <image class="icon" src="" mode="scaleToFill" /> -->
             <text class="title">{{item.title}}</text>
           </view> 
         </block>
       </view>
-    </view>
+    </view> -->
 </view>
   

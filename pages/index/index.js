@@ -4,8 +4,9 @@ const app = getApp()
 
 Page({
   data: {
-    topArray:[{title:"日志管理",icon:"record.png"},{title:"员工管理",icon:"record.png"},{title:"公文审批",icon:"record.png"},{title:"公文申请",icon:"record.png"},{title:"请假申请",icon:"record.png"},{title:"请假审批",icon:"record.png"}],
-    bottomArray:[{title:"123",icon:"123"},{title:"234",icon:"234"},{title:"123",icon:"123"},{title:"234",icon:"234"},{title:"123",icon:"123"},{title:"234",icon:"234"}]
+    sectionTitleArray:app.globalData.userInfo["power"]
+    // topArray:[{title:"日志管理",icon:"record.png"},{title:"员工管理",icon:"record.png"},{title:"公文审批",icon:"record.png"},{title:"公文申请",icon:"record.png"},{title:"请假申请",icon:"record.png"},{title:"请假审批",icon:"record.png"}],
+    // bottomArray:[{title:"123",icon:"123"},{title:"234",icon:"234"},{title:"123",icon:"123"},{title:"234",icon:"234"},{title:"123",icon:"123"},{title:"234",icon:"234"}]
   },
   //事件处理函数
   bindViewTap: function() {
@@ -38,12 +39,12 @@ Page({
       }
     })
   },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
+  // getUserInfo: function(e) {
+  //   console.log(e)
+  //   app.globalData.userInfo = e.detail.userInfo
+  //   this.setData({
+  //     userInfo: e.detail.userInfo,
+  //     hasUserInfo: true
+  //   })
+  // }
 })

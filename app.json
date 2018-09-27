@@ -1,8 +1,8 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/mine/mine",
     "pages/root/root",
+    "pages/mine/mine",
     "pages/index/index"
   ],
   "window":{

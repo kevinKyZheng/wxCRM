@@ -17,9 +17,10 @@ Page({
               'content-type': 'application/json' // 默认值
             },
             success (res) {
-              app.globalData.userInfo["userId"] = res.data["data"]["UserID"]
-              app.globalData.userInfo["token"] = res.data["data"]["Token"]
-
+              app.globalData.userInfo["userId"] = res.data["data"]["UserID"];
+              app.globalData.userInfo["token"] = res.data["data"]["Token"];
+              app.globalData.userInfo["power"] = res.data["data"]["UserPower"];
+              console.log(res);
               wx.switchTab({
                 url: '../root/root',
                 success: function(res){
@@ -32,9 +33,10 @@ Page({
                   // complete
                 }
               })
-              
-              console.log(app.globalData.userInfo["token"])
-              console.log(app.globalData.userInfo["userId"])
+              console.log(app.globalData.userInfo["token"]);
+              console.log(app.globalData.userInfo["userId"]);
+              console.log(app.globalData.userInfo["power"]);
+
             }
         })     
     },
