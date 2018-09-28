@@ -1,9 +1,47 @@
 const app = getApp()
+import { hexMD5 } from '../../utils/md5.js';
+
 Page({
     data:{
-
+      username:"",
+      password:"",
+      autoLogin:true
+    },
+    onLoad:function(){
+      var that = this
+      // wx.getStorage({
+      //   key:"historyLogin",
+      //   success:function(res){
+      //     console.log(res)
+      //     console.log(res.username)
+      //     that.setData({
+      //       // username:res.username,
+      //       // password:res["password"]
+      //     })
+      //   }
+      // })
+      wx.getStorage({
+        key:"username",
+        success:function(res){
+          console.log(res)
+          that.setData({
+            username:res
+          })
+        }
+      })
+      wx.getStorage({
+        key:"password",
+        success:function(res){
+          console.log(res)
+          that.setData({
+            password:res
+          })
+        }
+      })
+      this.tapLoginBtn()
     },
     tapLoginBtn:function(){
+        var that = this
         wx.showLoading({
           title:"加载中"
         })
@@ -14,6 +52,9 @@ Page({
               userPass: '91e31e2ef2076caf',
               userName: 'test_wtbuzhang',
               source: 'iOS'
+              // userPass: this.data.password,
+              // userName: this.data.username,
+              // source: 'iOS'
             },
             method:"POST",
             header: {
@@ -21,6 +62,17 @@ Page({
             },
             success (res) {
               wx.hideLoading()
+              //
+              wx.setStorage({
+                // key:"historyLogin",
+                // data:{"username":that.data.username,"password":that.data.password}
+                key:"password",
+                data:that.data.password
+              })
+              wx.setStorage({
+                key:"username",
+                data:that.data.username,
+              })
               app.globalData.userInfo["userId"] = res.data["data"]["UserID"];
               app.globalData.userInfo["token"] = res.data["data"]["Token"];
               app.globalData.userInfo["power"] = res.data["data"]["UserPower"];
@@ -44,5 +96,17 @@ Page({
             }
         })     
     },
+    usernameConfirm:function(e){
+      this.setData({
+        username:e.detail.value
+      })
+    },
+    passwordConfirm:function(e){
+      var passwordMD5 = hexMD5(e.detail.value).substring(8,24)
+      console.log(passwordMD5)
+      this.setData({
+        password:passwordMD5
+      })
+    }
 
 })

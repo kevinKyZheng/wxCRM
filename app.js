@@ -1,39 +1,223 @@
 //app.js
+const classDic = [
+  {"rizhi":[
+      {"badge":"0"},
+      {"title":"日志管理"},
+      {"icon":"root_rizhi.png"},
+      {"vcClass":"DailyRecordManageController"}]}
+  ]
+//   "gonggao":[
+//       "badge":"0",
+//       "title":"通知公告",
+//       "icon":"root_gonggao.png",
+//       "vcClass":"NoticeViewController"],
+//   "gongwenshenpi":[
+//       "badge":"0",
+//       "title":"公文审批",
+//       "icon":"root_shenpi.png",
+//       "vcClass":"OfficialDocumentController"],
+//   "gongwenshenqing":[
+//       "badge":"0",
+//       "title":"公文申请",
+//       "icon":"root_shenpi.png",
+//       "vcClass":"OfficialDocumentApplyController"],
+//   "waiqin":[
+//       "badge":"0",
+//       "title":"外勤",
+//       "icon":"root_waiqin.png",
+//       "vcClass":"OutdoorWorkViewController"],
+//   "qingjiashenqing":[
+//       "badge":"0",
+//       "title":"请假申请",
+//       "icon":"root_qingjia.png",
+//       "vcClass":"LeaveListController"],
+//   "qingjiashenpi":[
+//       "badge":"0",
+//       "title":"请假审批",
+//       "icon":"root_qingjiashenpi.png",
+//       "vcClass":"AskForLeaveApprovalController"],
+//   "huiyishi":[
+//       "badge":"0",
+//       "title":"会议室预约",
+//       "icon":"root_huiyishi.png",
+//       "vcClass":""],
+//   "kehutuijian":[
+//       "badge":"0",
+//       "title":"客户推荐",
+//       "icon":"root_kehutuijian.png",
+//       "vcClass":"CustomerRecommendVc"],
+//   "yuangong":[
+//       "badge":"0",
+//       "title":"员工管理",
+//       "icon":"root_guanli.png",
+//       "vcClass":""],
+//   "zhanbao":[
+//       "badge":"0",
+//       "title":"战报",
+//       "icon":"root_zhanbao.png",
+//       "vcClass":"SaleReportsViewController"],
+//   "waihutonghua":[
+//       "badge":"0",
+//       "title":"外呼通话",
+//       "icon":"icon-外呼通话.png",
+//       "vcClass":"DialogViewController"],
+//   "waihutonghua1":[
+//       "badge":"0",
+//       "title":"外呼通话",
+//       "icon":"icon-外呼通话.png",
+//       "vcClass":"OneDialogViewController"],
+//   "lukehu":[
+//       "badge":"0",
+//       "title":"录入客户",
+//       "icon":"root_lukehu.png",
+//       "vcClass":"InputWTClientInfoController"],
+//   "zhuku":[
+//       "badge":"0",
+//       "title":"主客户库",
+//       "icon":"root_zhukehuku.png",
+//       "vcClass":"MainCustomerViewController"],
+//   "quanbukehuku":[
+//       "badge":"0",
+//       "title":"全部客户库",
+//       "icon":"root_zhukehuku.png",
+//       "vcClass":"AllCustomerStorageController"],
+//   "xiaoshouku":[
+//       "badge":"0",
+//       "title":"我的客户库",
+//       "icon":"root_mykehuku.png",
+//       "vcClass":"MyCustomerViewController"],
+//   "chengdankehu":[
+//       "badge":"0",
+//       "title":"成单客户",
+//       "icon":"chengdankehu.png",
+//       "vcClass":"IntoASingleCustomerViewController"],
+//   "yuyuekehu":[
+//       "badge":"0",
+//       "title":"预约客户",
+//       "icon":"root_yuyue.png",
+//       "vcClass":"ReservationCustomerController"],
+//   "xudanku":[
+//       "badge":"0",
+//       "title":"续单公海",
+//       "icon":"root_gonghai.png",
+//       "vcClass":"ContinueViewController"],
+//   "dituiku":[
+//       "badge":"0",
+//       "title":"我的地推客户",
+//       "icon":"root_gonghai.png",
+//       "vcClass":"MyLandCustomerViewController"],
+//   "jianyi":[
+//       "badge":"0",
+//       "title":"产品建议",
+//       "icon":"root_jianyi.png",
+//       "vcClass":""],
+//   "mitiao":[
+//       "badge":"0",
+//       "title":"密条",
+//       "icon":"root_mitiao.png",
+//       "vcClass":""],
+//   "xierizongjie":[
+//       "badge":"0",
+//       "title":"写日总结",
+//       "icon":"DRM_rizongjie.png",
+//       "vcClass":"WriteDailySummaryController"],
+//   "dxxierizongjie":[
+//       "badge":"0",
+//       "title":"写日总结",
+//       "icon":"DRM_rizongjie.png",
+//       "vcClass":"SellWriteDailySummaryController"],
+//   "xierijihua":[
+//       "badge":"0",
+//       "title":"写日计划",
+//       "icon":"DRM_rijihua.png",
+//       "vcClass":"WriteDailyPlanController"],
+//   "dxxierijihua":[
+//       "badge":"0",
+//       "title":"写日计划",
+//       "icon":"DRM_rijihua.png",
+//       "vcClass":"SellWriteDailyPlanController"],
+//   "xiezhouzongjie":[
+//       "badge":"0",
+//       "title":"写周总结",
+//       "icon":"DRM_zhouzongjie.png",
+//       "vcClass":"WriteWeeklySummaryController"],
+//   "xiezhoujihua":[
+//       "badge":"0",
+//       "title":"写周计划",
+//       "icon":"DRM_zhoujihua.png",
+//       "vcClass":"WriteWeeklyPlanController"],
+//   "woderizhi":[
+//       "badge":"0",
+//       "title":"我的日志",
+//       "icon":"DRM_mydailyrecord.png",
+//       "vcClass":"MyDailyRecordController"],
+//   "bumenyuangongrizhi":[
+//       "badge":"0",
+//       "title":"部门员工日志",
+//       "icon":"DRM_otherdailyrecord.png",
+//       "vcClass":"OtherDailyRecordController"],
+//   "kehubaifang":[
+//       "badge":"0",
+//       "title":"客户拜访",
+//       "icon":"waiqin_kehubaifang",
+//       "vcClass":"CustomerVisitViewController"],
+//   "shichangpeifang":[
+//       "badge":"0",
+//       "title":"市场陪访",
+//       "icon":"waiqin_peifang",
+//       "vcClass":"PeifangController"],
+//   "waiqindaka":[
+//       "badge":"0",
+//       "title":"外勤打卡",
+//       "icon":"waiqin_daka",
+//       "vcClass":"OutdoorWorkSignInViewController"],
+//   "wodebaifangjilu":[
+//       "badge":"0",
+//       "title":"我的拜访记录",
+//       "icon":"waiqin_baifangjilu",
+//       "vcClass":"MyVisitRecordViewController"],
+//   "wodepeifangjilu":[
+//       "badge":"0",
+//       "title":"我的陪访记录",
+//       "icon":"waiqin_peifangjilu",
+//       "vcClass":"PeifangRecordfController"],
+//   "yuangongbaifangtongji":[
+//       "badge":"0",
+//       "title":"员工拜访统计",
+//       "icon":"waiqin_yuangongbaifangtongji",
+//       "vcClass":"CustomerVisitStatisticsViewController"],
+//   "yuangongpeifangtongji":[
+//       "badge":"0",
+//       "title":"员工陪访统计",
+//       "icon":"waiqin_yuangongpeifangtongji",
+//       "vcClass":"AccompanyVisitStatisticsViewController"],
+//   "yuangongdakatongji":[
+//       "badge":"0",
+//       "title":"员工打卡统计",
+//       "icon":"waiqin_yuangongdakatongji",
+//       "vcClass":"OutdoorWorkStatisticsViewController"],
+//   "yuangongweizhi":[
+//       "badge":"0",
+//       "title":"员工位置",
+//       "icon":"waiqin_yuangongweizhi",
+//       "vcClass":"StaffLocationViewController"],
+//   //快捷方式
+//   "fashenpi":[
+//       "badge":"0",
+//       "title":"发审批",
+//       "icon":"root_fashenpi.png",
+//       "vcClass":"AddOfficialDocumentController"],
+//   "fagonggao":[
+//       "badge":"0",
+//       "title":"发公告",
+//       "icon":"root_fagonggao.png",
+//       "vcClass":"PublishNoticeViewController"
+//   ]
+// ]
+
 App({
-  onLaunch: function () {
-    // 展示本地存储能力
-    var logs = wx.getStorageSync('logs') || []
-    logs.unshift(Date.now())
-    wx.setStorageSync('logs', logs)
-
-    // 登录
-    wx.login({
-      success: res => {
-        // 发送 res.code 到后台换取 openId, sessionKey, unionId
-      }
-    })
-    // 获取用户信息
-    wx.getSetting({
-      success: res => {
-        if (res.authSetting['scope.userInfo']) {
-          // 已经授权，可以直接调用 getUserInfo 获取头像昵称，不会弹框
-          wx.getUserInfo({
-            success: res => {
-              // 可以将 res 发送给后台解码出 unionId
-              this.globalData.userInfo = res.userInfo
-
-              // 由于 getUserInfo 是网络请求，可能会在 Page.onLoad 之后才返回
-              // 所以此处加入 callback 以防止这种情况
-              if (this.userInfoReadyCallback) {
-                this.userInfoReadyCallback(res)
-              }
-            }
-          })
-        }
-      }
-    })
-  },
   globalData: {
-    userInfo: {"userId":"","token":"","power":[]}
+    userInfo: {"userId":"","token":"","power":[]},
+    classDic: classDic
   }
 })

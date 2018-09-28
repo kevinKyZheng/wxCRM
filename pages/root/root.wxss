@@ -3,31 +3,32 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-  
+    /* white-space: nowrap; */
     /* background-color: blueviolet; */
   }
   .header{
-    color: "#939699";
-    
-    font-size: 13px;
-    /* background-color:"#f5f6f7" ; */
+    /* flex: 1; */
+    color: #939699;
+    /* background: blue; */
+    font-size: 26rpx;
     margin-left: 10rpx;
-  
+    margin-top: 30rpx;
+    /* height: 30rpx; */
   }
-  .content{
+   /* .content{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    /* background-color: blue; */
+    background-color: blue; 
     margin-top: 15rpx;
-  }
+  }  */
   .list {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
   
-    margin-top: 10rpx;
+    /* margin-top: 10rpx; */
   }
   .item{
     display: flex;
@@ -48,4 +49,11 @@
     margin-top: 25rpx;
     width: 90rpx;
     height: 90rpx;
+  }
+  #content{
+    /* height: 500rpx; */
+    background: white;
+    margin-top: 20rpx;
+    /* !!!重要,当图标少的时候会不换行 */
+    width: 100%;
   }

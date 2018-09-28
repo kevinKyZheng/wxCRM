@@ -1,9 +1,9 @@
 {
   "pages":[
     "pages/login/login",
-    "pages/root/root",
     "pages/mine/mine",
-    "pages/index/index"
+    "pages/root/root",
+    "pages/journal/journal"
   ],
   "window":{
     "backgroundTextStyle":"light",

@@ -13,45 +13,28 @@ Page({
     this.setData({
       sectionTitleArray:app.globalData.userInfo["power"],
       // elements:app.globalData.userInfo["power"]["elements"]
-    })
+    });
+    var power = app.globalData.userInfo["power"]
+    var elements = power.elements
+    // console.log(app.globalData.userInfo["power"]["title"])
+    console.log(elements)
+    for (const element in elements) {
+      console.log("123")
+      if(element === "rizhi"){
+        console.log(app.globalData.classDic[element])
+      }
+      // if (object.hasOwnProperty(element)) {
+      //   const element = object[element];
+        
+      // }
+    }
   },
   //事件处理函数
-  bindViewTap: function() {
+  goDetail:function(e){
+    console.log(e.currentTarget.dataset.id)
+    // navigateUrl = 
     wx.navigateTo({
-      url: '../logs/logs'
-    })
+        url:"../journal/journal"
+    });
   },
-  // goDetail:function(e){
-  //   console.log(e.currentTarget.dataset.id)
-  //   // navigateUrl = 
-  //   wx.navigateTo({
-  //       url:'../logs/logs'
-  //   });
-  // },
-  goDetail:function(){
-    wx.request({
-      url: 'http://crmapi.chinawutong.com/api/Login/UserLogin', //仅为示例，并非真实的接口地址
-      // "userName": username, "userPass": password, "source": "iOS"
-      data: {
-        userPass: '91e31e2ef2076caf',
-        userName: 'test_wtbuzhang',
-        source: 'iOS'
-      },
-      method:"POST",
-      header: {
-        'content-type': 'application/json' // 默认值
-      },
-      success (res) {
-        console.log(res.data)
-      }
-    })
-  },
-  getUserInfo: function(e) {
-    console.log(e)
-    app.globalData.userInfo = e.detail.userInfo
-    this.setData({
-      userInfo: e.detail.userInfo,
-      hasUserInfo: true
-    })
-  }
 })

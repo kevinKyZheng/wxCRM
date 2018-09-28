@@ -5,6 +5,17 @@
     width: 100%;
     height: 400rpx;
 }
+.bgImage{
+    width: 100%;
+    height: 100%;
+}
+.headerContent{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    z-index: 1;
+}
 .icon{
     width: 75px;
     height: 75px;
@@ -22,15 +33,46 @@
     font-size: 30rpx;
 }
 .list{
+    /* margin-top: 50rpx; */
+    width: 100%;
     background-color: white;
+    height: 288rpx;
+
 }
 .item{
-    /* display: inline; */
+    display: flex;
+    flex-direction: row ;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 96rpx;
+    /* margin-top: 10rpx; */
+    /* background-color: #3b9cff; */
+}
+.itemTitle{
+    margin-left: 30rpx;
+    color: #2b2f33;
+    font-size: 32rpx;
+}
+.itemContent{
+    /* 这个flex什么意思 */
+    flex :1;
+    margin-right: 30rpx;
+    color: #939699;
+    font-size: 32rpx;
+    text-align: end;
 }
 .logout{
+    margin-top: 60rpx;
     color: #3b9cff;
-    width: 570rpx;
+    width: 680rpx;
 }
 .logout::after{
     /* border: ; */
+}
+
+#card{
+    margin-top: 20rpx;
+    width: 100%;
+    background: white;
 }
