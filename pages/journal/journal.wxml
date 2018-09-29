@@ -1,0 +1,8 @@
+<view class="container wrapper">
+    <block wx:for="{{array}}">
+        <view class="item">
+            <image class="icon" src="../../images/record/{{item.icon}}"></image>
+            <text class="title">{{item.title}}</text>
+        </view>
+    </block>
+</view>

@@ -1,0 +1,26 @@
+.wrapper{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 100%;
+
+}
+.item{
+    width: 270rpx;
+    height: 180rpx;
+    background: rebeccapurple;
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+}
+.icon{
+    margin-top: 20rpx
+}
+.title{
+    margin-top: 20rpx;
+    font-size: 30rpx;
+    color: #939699;
+}
