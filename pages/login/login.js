@@ -38,22 +38,23 @@ Page({
           })
         }
       })
-      this.tapLoginBtn()
+      // this.tapLoginBtn()
     },
     tapLoginBtn:function(){
+        console.log(this.data.username)
+        console.log(this.data.password)
         var that = this
         wx.showLoading({
           title:"加载中"
         })
         wx.request({
             url: 'http://crmapi.chinawutong.com/api/Login/UserLogin', //仅为示例，并非真实的接口地址
-            // "userName": username, "userPass": password, "source": "iOS"
             data: {
               userPass: '91e31e2ef2076caf',
               userName: 'test_wtbuzhang',
               source: 'iOS'
-              // userPass: this.data.password,
-              // userName: this.data.username,
+              // userPass: that.data.password,
+              // userName: that.data.username,
               // source: 'iOS'
             },
             method:"POST",
@@ -92,6 +93,15 @@ Page({
               console.log(app.globalData.userInfo["token"]);
               console.log(app.globalData.userInfo["userId"]);
               console.log(app.globalData.userInfo["power"]);
+
+            },
+            fail(e){
+              wx.hideLoading()
+              wx.showToast({
+                title:e
+              })
+            },
+            complete(e){
 
             }
         })     
