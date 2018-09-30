@@ -27,10 +27,10 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-  
     /* margin-top: 10rpx; */
   }
   .item{
+    margin-top:50rpx; 
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
@@ -45,8 +45,8 @@
     font-size: 30rpx;
   }
   .icon{
-    text-align: center;
-    margin-top: 25rpx;
+    /* text-align: center; */
+    /* margin-top: 25rpx; */
     width: 90rpx;
     height: 90rpx;
   }
@@ -54,6 +54,7 @@
     /* height: 500rpx; */
     background: white;
     margin-top: 20rpx;
+    padding-bottom: 50rpx;
     /* !!!重要,当图标少的时候会不换行 */
     width: 100%;
   }

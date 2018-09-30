@@ -1,8 +1,11 @@
 <view class="container wrapper">
-    <block wx:for="{{array}}">
-        <view class="item">
-            <image class="icon" src="../../images/record/{{item.icon}}"></image>
-            <text class="title">{{item.title}}</text>
-        </view>
-    </block>
+    <view class="header">
+        <block wx:for="{{array}}">
+            <view class="item" bindtap = "itemTap">
+                <image class="icon" src="../../images/record/{{item.icon}}"></image>
+                <text class="title">{{item.title}}</text>
+            </view>
+        </block>
+    </view>
+    <view class="table">我的日志</view>
 </view>

@@ -23,3 +23,5 @@ page{
   width: 100%;
   /* margin-left: 10rpx; */
 }
+
+.grayText{color: #939699}
