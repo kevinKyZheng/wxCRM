@@ -41,7 +41,7 @@ Page({
         })
       }
     })
-    this.tapLoginBtn()
+    // this.tapLoginBtn()
   },
   // tapLoginBtn: function () {
   //   console.log("123")
