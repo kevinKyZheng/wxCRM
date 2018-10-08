@@ -1,5 +1,7 @@
 <view class="container">
-        <text class="header" bindtap="TapHeader">{{today}}</text>
+        <view class="header" bindtap="TapHeader">
+                <text>{{today}}</text>
+        </view>
         <scroll-view class="list">
                 <block wx:for="{{dataSource}}">
                         <view class="section">
@@ -25,5 +27,5 @@
                 </block>
                 <view class="addNewone" bindtap="addNewone">+再添加一项</view>
         </scroll-view>
-        <view class="footer">立即提交</view>
+        <view class="footer" bindtag="commit">立即提交</view>
 </view>

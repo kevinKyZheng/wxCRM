@@ -30,6 +30,9 @@ Page({
             dataSource:oldData
         })
     },
+    commit:function(){
+
+    },
     onLoad: function () {
         var timestamp = Date.parse(new Date());
         var date = new Date(timestamp); //年         
