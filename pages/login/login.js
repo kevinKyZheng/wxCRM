@@ -104,6 +104,11 @@ Page({
       wx.showLoading({
         title:"加载中"
       })
+      // wx.login({
+      //   success:(res)=>{
+      //     console.log(res)
+      //   }
+      // })
       wx.request({
           url: 'http://crmapi.chinawutong.com/api/Login/UserLogin', //仅为示例，并非真实的接口地址
           data: {
@@ -134,6 +139,7 @@ Page({
             app.globalData.userInfo["userId"] = res.data["data"]["UserID"];
             app.globalData.userInfo["token"] = res.data["data"]["Token"];
             app.globalData.userInfo["power"] = res.data["data"]["UserPower"];
+            app.globalData.userInfo["username"] = res.data["data"]["RoleName"];
             console.log(res);
             wx.switchTab({
               url: '../root/root',

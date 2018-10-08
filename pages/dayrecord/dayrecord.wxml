@@ -1,6 +1,29 @@
-<calendar calendar-style="calendar" 
-        header-style="header" 
-        board-style="board" 
-        weeks-type="cn" 
-        binddayClick="dayClick"
-        days-color="{{daysStyle}}"/>
+<view class="container">
+        <text class="header" bindtap="TapHeader">{{today}}</text>
+        <scroll-view class="list">
+                <block wx:for="{{dataSource}}">
+                        <view class="section">
+                                <view class="level item">
+                                        <text>{{item.level}}</text>
+                                </view>
+                                <view class="line tableLine"></view>
+
+                                <view class="level item">
+                                        <input placeholder="工作事项和内容" class="content item">{{item.content}}</input>
+                                </view>
+                                <view class="line tableLine"></view>
+
+                                <view class="level item">
+                                        <text class="username item">{{username}}</text>
+                                </view>
+                                <view class="line tableLine"></view>
+
+                                <view class="level item">
+                                        <text class="progress item">完成情况</text>
+                                </view>
+                        </view>
+                </block>
+                <view class="addNewone" bindtap="addNewone">+再添加一项</view>
+        </scroll-view>
+        <view class="footer">立即提交</view>
+</view>

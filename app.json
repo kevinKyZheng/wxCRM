@@ -3,7 +3,9 @@
     "pages/login/login",
     "pages/mine/mine",
     "pages/root/root",
-    "pages/journal/journal"
+    "pages/journal/journal",
+    "pages/dayrecord/dayrecord",
+    "pages/calendar/calendar"
   ],
   "plugins": {
     "calendar": {

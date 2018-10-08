@@ -25,3 +25,4 @@ page{
 }
 
 .grayText{color: #939699}
+.themeColor{color:#3b9cff}
