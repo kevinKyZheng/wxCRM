@@ -1,0 +1,35 @@
+<view class="container">
+        <view class="header" bindtap="TapHeader">
+                <text>{{today}}</text>
+        </view>
+        <scroll-view scroll-y class="list">
+                <block wx:for="{{dataSource}}">
+                        <view class="section">
+                                <view class="level item">
+                                        <ky-icon type="sad"></ky-icon>
+                                        <text>{{item.level}}</text>
+                                        <icon type = "clear" size = "21" id = "clear" bindtap="tapClear"></icon>
+                                </view>
+                                <view class="line tableLine"></view>
+
+                                <view class="level item">
+                                        <input display="block" placeholder="工作事项和内容" class="content item">{{item.content}}</input>
+                                </view>
+                                <view class="line tableLine"></view>
+
+                                <view class="level item">
+                                        <text class="username item">{{username}}</text>
+                                </view>
+                                <view class="line tableLine"></view>
+
+                                <view class="level item">
+                                        <text class="progress item">完成情况</text>
+                                </view>
+                        </view>
+                </block>
+                <view class="addNewone" bindtap="addNewone">
+                        <text class="text">+再添加一项</text>
+                </view>
+        </scroll-view>
+        <!-- <button class="footer">立即提交</button> -->
+</view>

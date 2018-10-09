@@ -1,0 +1,5 @@
+{
+    "usingComponents":{
+        "ky-icon":"../../component/icon/index"
+    }
+}

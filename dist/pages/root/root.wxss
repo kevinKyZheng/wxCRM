@@ -1,0 +1,59 @@
+@charset "UTF-8";
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  /* white-space: nowrap; */
+  /* background-color: blueviolet; */ }
+
+.header {
+  /* flex: 1; */
+  color: #939699;
+  /* background: blue; */
+  font-size: 26rpx;
+  margin-left: 10rpx;
+  margin-top: 30rpx;
+  /* height: 30rpx; */ }
+
+/* .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: blue; 
+    margin-top: 15rpx;
+  }  */
+.list {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+  /* margin-top: 10rpx; */ }
+
+.item {
+  margin-top: 50rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 25%;
+  /* background-color: aquamarine; */
+  /* height: 188rpx;  */ }
+
+.title {
+  margin-top: 10rpx;
+  color: "#2b2f33";
+  font-size: 30rpx; }
+
+.icon {
+  /* text-align: center; */
+  /* margin-top: 25rpx; */
+  width: 90rpx;
+  height: 90rpx; }
+
+#content {
+  /* height: 500rpx; */
+  background: white;
+  margin-top: 20rpx;
+  padding-bottom: 50rpx;
+  /* !!!重要,当图标少的时候会不换行 */
+  width: 100%; }

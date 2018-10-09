@@ -1,0 +1,16 @@
+<scroll-view class="container wrapper" scroll-y="true" style="height: 100%">
+  <view class="list">
+    <block wx:for="{{sectionTitleArray}}" wx:key="index">
+      <text class="header">{{item.title}}</text>
+      <view class="list" id="content">
+        <block wx:for="{{item.elements}}" wx:key="index" wx:for-item="element">
+          <view class="item" catch:tap="goDetail">
+            <image class="icon" src="../../images/record.png" />
+            <text class="title">{{element}}</text>
+          </view>
+          <!-- <text class="header">{{element}}</text> -->
+        </block>
+      </view>
+    </block>
+  </view>
+</scroll-view>

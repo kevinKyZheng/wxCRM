@@ -1,0 +1,18 @@
+<view class="container">
+    <image class="icon" src="../../images/login/LoginAppIcon.png" />
+    <text class="title">物通CRM</text>
+    <view class="username">
+        <text class="inputTitle">登录名:</text>
+        <input id="usernameInput" bindblur="usernameConfirm" placeholder="请输入登录名" placeholder-style="color:#c4c8cc;font-size:32rpx;"></input>
+    </view>
+    <view class="line"></view>
+    <view class="password">
+        <text class="inputTitle" style="white-space:pre;">密   码:</text>
+        <input id="passwordInput" bindblur="passwordConfirm" password="{{true}}" placeholder="请输入密码" placeholder-style="color:#c4c8cc;font-size:32rpx;"></input>
+    </view>
+    <view class="line"></view>
+    <button class="loginButton" bindtap="tapLoginBtn">
+        登录
+    </button>
+    <text class="company">北京物通时空科技开发有限公司</text>
+</view>

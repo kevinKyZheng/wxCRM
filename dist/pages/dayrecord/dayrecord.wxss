@@ -1,0 +1,58 @@
+.header {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100rpx;
+  width: 100%;
+  margin-top: 20rpx;
+  background-color: white;
+  color: #2b2f33;
+  font-size: 32rpx; }
+
+.list {
+  width: 100%; }
+
+.footer {
+  height: 100rpx;
+  width: 100%;
+  background-color: #3b9cff;
+  color: white;
+  font-size: 36rpx;
+  position: absolute;
+  bottom: 0; }
+
+.addNewone {
+  height: 100rpx;
+  width: 100%;
+  background-color: white;
+  color: #3b9cff;
+  margin-top: 20rpx;
+  font-size: 36rpx;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center; }
+
+.section {
+  background-color: white;
+  margin-top: 20rpx;
+  font-size: 32rpx; }
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  height: 96rpx;
+  width: 100%; }
+
+#clear {
+  position: absolute;
+  right: 10rpx;
+  margin-top: auto;
+  margin-bottom: auto; }
+
+button::after {
+  border: 0;
+  border-radius: 0rpx; }

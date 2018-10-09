@@ -1,0 +1,6 @@
+<calendar calendar-style="calendar" 
+        header-style="header" 
+        board-style="board" 
+        weeks-type="cn" 
+        binddayClick="dayClick"
+        days-color="{{daysStyle}}"/>

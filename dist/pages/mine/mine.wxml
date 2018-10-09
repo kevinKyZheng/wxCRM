@@ -1,0 +1,30 @@
+<view class="container">
+        <!-- style="background-image:url('../../../../images/mine/mine_bgView_image.png')" -->
+    <view class="header">
+        <image class = "bgImage" src='../../../../images/mine/mine_bgView_image.png'> </image>
+        <view class = "headerContent">
+            <image class="icon" wx:if="{{headImgSource===''}}" src="../../images/mine/Me_AvatarPlaceholder_75x75_@2x.png" ></image>
+            <image class="icon" wx:else src="{{headImgSource}}" lazy-load="true"></image>
+            <text class="title">{{userName}}</text>
+            <text class="motto">在学习中感悟，在工作中进取!</text>
+        </view>
+    </view>
+    <view class="list">
+        <block wx:for="{{infoArray}}" wx:key="index" >
+            <view class="item" bindtap="tapItem">
+                <text class="itemTitle">{{titleArray[index]}}</text>
+                <text class="itemContent">{{item}}</text>
+                <!-- <view class="tableLine"></view> -->
+            </view>
+        </block>
+    </view>
+
+    <view class="item" id="card" bindtap="tapItem">
+            <text class="itemTitle">我的名片</text>
+    </view>
+
+
+    <button class="logout" bindtap="tapLogoutBtn">
+        安全退出
+    </button>
+</view>

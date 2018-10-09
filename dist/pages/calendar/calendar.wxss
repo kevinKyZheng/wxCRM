@@ -1,0 +1,10 @@
+.calendar {
+  background-color: white;
+  padding-top: 20rpx; }
+
+.header {
+  font-size: 30rpx;
+  color: #2b2f33; }
+
+.board {
+  color: #939699; }
