@@ -6,12 +6,14 @@
   height: 100rpx;
   width: 100%;
   margin-top: 20rpx;
+  margin-left: 20rpx;
   background-color: white;
   color: #2b2f33;
   font-size: 32rpx; }
 
 .list {
-  width: 100%; }
+  width: 100%;
+  height: calc(100% - 200rpx); }
 
 .footer {
   height: 100rpx;
@@ -21,6 +23,25 @@
   font-size: 36rpx;
   position: absolute;
   bottom: 0; }
+
+.section {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20rpx; }
+
+.item {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rpx;
+  background-color: white;
+  font-size: 32rpx;
+  height: 96rpx;
+  width: 100%; }
 
 .addNewone {
   height: 100rpx;
@@ -34,18 +55,13 @@
   justify-content: center;
   align-items: center; }
 
-.section {
-  background-color: white;
-  margin-top: 20rpx;
-  font-size: 32rpx; }
+.icon {
+  margin-left: 20rpx;
+  margin-top: 8rpx; }
 
-.item {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: center;
-  height: 96rpx;
-  width: 100%; }
+.title {
+  color: #2b2f33;
+  margin-left: 10rpx; }
 
 #clear {
   position: absolute;
@@ -56,3 +72,8 @@
 button::after {
   border: 0;
   border-radius: 0rpx; }
+
+::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+  color: transparent; }

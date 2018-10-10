@@ -1,81 +1,123 @@
+@import '../../common/css/color.scss';
+
 $line-height:100rpx;
 $screen-width: 100%;
+
 @mixin flex-row {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
 }
-@mixin flex-center{
+
+@mixin flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+@mixin flex-center {
     display: flex;
     flex-direction: row;
     justify-content: center;
     align-items: center;
 }
+
 // 主界面
-.header{
+.header {
     @include flex-row();
     height: $line-height;
     width: $screen-width;
     margin-top: 20rpx;
+    margin-left: 20rpx;
     background-color: white;
-    color: #2b2f33;
+    color: $default-text-color;
     font-size: 32rpx;
 }
-.list{
+
+.list {
     width: $screen-width;
+    height: calc(100% - 200rpx);
     // height: 100%;
     // padding-top: $line-height + 20rpx;
     // padding-bottom: $line-height;
 }
-.footer{
+
+.footer {
     height: $line-height;
     width: $screen-width;
-    background-color: #3b9cff;
+    background-color: $theme-blue;
     color: white;
     font-size: 36rpx;
 
     position: absolute;
     bottom: 0;
 }
-//组件
-.addNewone{
+
+// !列表
+.section {
+    @include flex-column();
+    // background-color: white;
+    margin-top: 20rpx;
+}
+
+.item {
+    @include flex-row();
+    margin-top: 1rpx;
+    background-color: white;
+    font-size: 32rpx;
+    // margin-bottom: auto;
+    height: 96rpx;
+    width: $screen-width;
+}
+
+// !组件
+.addNewone {
     height: 100rpx;
     width: $screen-width;
     background-color: white;
-    color: #3b9cff;
-    margin-top: 20rpx; 
+    color: $theme-blue;
+    margin-top: 20rpx;
     font-size: 36rpx;
     @include flex-center();
 
 }
 
+.icon {
+    margin-left: 20rpx;
+    margin-top: 8rpx;
+}
 
-.section{
-    background-color: white;
-    margin-top: 20rpx;
-    font-size: 32rpx;
+.title {
+    color: $default-text-color;
+    margin-left: 10rpx;
 }
-.item{
-    @include flex-row();
-    // margin-top: auto;
-    // margin-bottom: auto;
-    height: 96rpx;
-    width: $screen-width;
-}
-#clear{
+
+#clear {
     position: absolute;
     right: 10rpx;
     margin-top: auto;
     margin-bottom: auto;
 }
-.line{
 
-}
-button::after{
+.line {}
+
+button::after {
     border: 0;
     border-radius: 0rpx;
 }
-// .text{
-//     @include flex-center();
+
+::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+    color: transparent;
+}
+
+// /*定义滚动条轨道 内阴影+圆角*/
+// ::-webkit-scrollbar-track {
+//     -webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.3);
+//     border-radius: 10px;
+//     background-color: yellow;
 // }

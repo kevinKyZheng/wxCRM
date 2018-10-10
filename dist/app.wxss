@@ -14,11 +14,10 @@ page {
   background-color: #f5f6f7; }
 
 .tableLine {
-  background: #e0e3e6;
-  /* background: blue; */
+  /* background: #e0e3e6; */
+  background: blue;
   height: 1rpx;
-  width: 100%;
-  /* margin-left: 10rpx; */ }
+  width: 80%; }
 
 /* .text{
   margin: auto;

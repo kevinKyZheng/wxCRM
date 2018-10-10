@@ -5,25 +5,28 @@
         <scroll-view scroll-y class="list">
                 <block wx:for="{{dataSource}}">
                         <view class="section">
-                                <view class="level item">
-                                        <ky-icon type="sad"></ky-icon>
-                                        <text>{{item.level}}</text>
-                                        <icon type = "clear" size = "21" id = "clear" bindtap="tapClear"></icon>
+                                <view class="item">
+                                        <ky-icon class="icon" type="level"></ky-icon>
+                                        <text class="title">{{item.level}}</text>
+                                        <icon type="clear" size="21" id="clear" bindtap="tapClear"></icon>
                                 </view>
                                 <view class="line tableLine"></view>
 
-                                <view class="level item">
-                                        <input display="block" placeholder="工作事项和内容" class="content item">{{item.content}}</input>
+                                <view class="item">
+                                        <ky-icon class="icon" type="content"></ky-icon>
+                                        <input  class="content title" display="block" placeholder="工作事项和内容">{{item.content}}</input>
                                 </view>
                                 <view class="line tableLine"></view>
 
-                                <view class="level item">
-                                        <text class="username item">{{username}}</text>
+                                <view class="item">
+                                        <ky-icon class="icon" type="executant"></ky-icon>
+                                        <text class="title username">{{username}}</text>
                                 </view>
                                 <view class="line tableLine"></view>
 
-                                <view class="level item">
-                                        <text class="progress item">完成情况</text>
+                                <view class="item">
+                                        <ky-icon class="icon" type="performance"></ky-icon>
+                                        <text class="title progress">完成情况</text>
                                 </view>
                         </view>
                 </block>
@@ -31,5 +34,5 @@
                         <text class="text">+再添加一项</text>
                 </view>
         </scroll-view>
-        <!-- <button class="footer">立即提交</button> -->
+        <button class="footer">立即提交</button>
 </view>

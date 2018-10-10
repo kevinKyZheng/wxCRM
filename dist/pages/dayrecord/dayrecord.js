@@ -14,6 +14,16 @@ Page({
             content: "",
             // username: app.globalData.userInfo["username"],
             progress: ""
+        }, {
+            level: "B类 较重要",
+            content: "",
+            // username: app.globalData.userInfo["username"],
+            progress: ""
+        }, {
+            level: "B类 较重要",
+            content: "",
+            // username: app.globalData.userInfo["username"],
+            progress: ""
         }],
         today: "",
         username: ""

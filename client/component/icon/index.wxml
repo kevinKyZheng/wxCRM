@@ -1,2 +1,3 @@
 
-<text class="icon icon-{{ type }}"></text>
+<!-- <text class="icon icon-{{ type }}"></text> -->
+<image class="icon" src="../../images/record/rizhi_{{type}}.png"></image>

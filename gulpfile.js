@@ -121,3 +121,7 @@ gulp.task('clean', () => {
 gulp.task('dev', ['clean'], () => {
   runSequence('json', 'images', 'wxml', 'wxss', 'js', 'wxs', 'watch')
 })
+
+gulp.task('build',['clean'],() => {
+  runSequence('json','images', 'wxml', 'wxss', 'js', 'wxs')
+})
