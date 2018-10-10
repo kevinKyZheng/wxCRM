@@ -3,12 +3,7 @@
     <block wx:for="{{sectionTitleArray}}" wx:key="index">
       <text class="header">{{item.title}}</text>
       <view class="list" id="content">
-        <!-- <block wx:for="{{item.elements}}" wx:key="index" wx:for-item="element"> -->
         <block wx:for="{{itemsArray}}" wx:key="index" wx:for-item="element">
-          <!-- <view class="item" catch:tap="goDetail">
-            <image class="icon" src="../../images/root/{{element.icon}}" />
-            <text class="title">{{element.title}}</text>
-          </view> -->
           <navigator url="../{{element.url}}" class="item">
             <image class="icon" src="../../images/root/{{element.icon}}" />
             <text class="title">{{element.title}}</text>

@@ -19,9 +19,6 @@ page {
   height: 1rpx;
   width: 80%; }
 
-/* .text{
-  margin: auto;
-} */
 .grayText {
   color: #939699; }
 
